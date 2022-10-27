@@ -136,7 +136,7 @@ class Ipod extends React.Component{
 
     changePageToHomeScreen = () => {
 
-        if(this.state.activeItem === 'MyMusic' || this.state.activeItem === 'Artists'){
+        if(this.state.activeItem === 'MyMusic' || this.state.activeItem === 'Artists' ){
             this.setState({
                 activeItem : 'Music',
                 activePage : 'Home'
@@ -169,11 +169,11 @@ class Ipod extends React.Component{
 
     componentDidMount(){
         let audio = document.getElementsByClassName("audio-element")[0];
-        console.log(audio)
+        // console.log(audio)
         this.setState({
             audio : audio,
         })
-        console.log(this.state)
+        // console.log(this.state)
     }
 
     render(){
@@ -189,22 +189,23 @@ class Ipod extends React.Component{
                 <div id='inner-container' style = {styles.wheel} onMouseOver={this.rotateWheel}>
                     <div style = {styles.buttonContainer}>
                         <div style = {styles.menuButton}>
-                            <i onClick={this.changePageToHomeScreen} style = {styles.image} className="fas fa-bars"></i>
+                        
+                            <img style = {{marginLeft:-10, marginTop:-5,   height:45 , width:45 , color:'white', borderRadius:50}} src="https://t3.ftcdn.net/jpg/00/70/24/16/240_F_70241613_jLOBn0YkQfLGe7AnwagKEuh1DSymFJpp.jpg" onClick={this.changePageToHomeScreen}  className="fas fa-bars"></img>
                         </div>
                         
                     </div>
                     <div style = {styles.buttonContainer}>
                         <div style = {styles.middleButtons}>
-                            
-                            <i style = {styles.image} className="fas fa-fast-backward"></i>
+                        
+                            <img src="https://cdn-icons-png.flaticon.com/128/39/39712.png" style = {styles.image} className="fas fa-fast-backward"></img>
                             <div onClick={this.changePage} style={{backgroundImage: 'linear-gradient(45deg, #8c8181, transparent)' , width : '5rem' , height : '5rem' , borderRadius : '50%'}}></div>
-                            <i style = {styles.image} className="fas fa-fast-forward"></i>
+                            <img  src="https://cdn-icons-png.flaticon.com/128/4211/4211386.png" style = {styles.image} className="fas fa-fast-forward"></img>
                             
                         </div>
                     </div>
                     <div style = {styles.buttonContainer}>
                         <div onClick={this.toggle} style = {styles.playButton}>
-                            <i onClick={this.toggle} style = {styles.image} className="fas fa-play"></i>&nbsp;<i onClick={this.toggle} style = {styles.image} className="fas fa-pause"></i>
+                            <img  src="https://cdn-icons-png.flaticon.com/128/1055/1055007.png" onClick={this.toggle} style = {styles.image} className="fas fa-play"></img>&nbsp;<i onClick={this.toggle} style = {styles.image} className="fas fa-pause"></i>
                         </div>
                     </div>
                 </div>
@@ -246,6 +247,11 @@ const styles = {
         justifyContent : 'center'
     },
     menuButton : {
+        // backgroundColor:'white',
+        
+        height:30,
+        width:30,
+        // backgroundColor:#4d4f50,
         alignSelf:'center'
     },
     playButton : {
@@ -260,7 +266,8 @@ const styles = {
     },
     image: {
         alignSelf : 'center',
-        fontSize: '1.5rem',
+        height:40,
+        width:40,
         color : 'white'
     },
 }

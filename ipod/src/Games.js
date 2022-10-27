@@ -7,7 +7,7 @@ class Games extends React.Component{
             <div style={styles.settings} >
                  <div style={styles.titleBar}>
                         <p style={{fontWeight:'bold'}}>iPod</p>
-                        <img style={styles.battery} src="https://image.flaticon.com/icons/svg/3103/3103446.svg"></img>
+                        <img style={styles.battery} src="https://cdn-icons-png.flaticon.com/128/664/664883.png"></img>
                     </div>
                 <div style={{width : '100%' , height : '90%'}}>
                     <img style={styles.image} src="https://media2.giphy.com/media/uYe2emzPgDfj2/giphy.webp?cid=ecf05e47fa455dac230de80fff0206077175b008801bc689&rid=giphy.webp" />
